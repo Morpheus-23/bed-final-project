@@ -1,13 +1,14 @@
 import { Router } from "express";
 import getUsers from "../services/users/getUsers.js";
 import authMiddleware from "../middleware/auth.js";
+import { PrismaClient } from "@prisma/client";
 
 const users = Router();
 
-users.get("/", async (req, res, next) => {
+users.get("/", (req, res, next) => {
   try {
     const { username, email } = req.query;
-    const users = await getUsers(username, email);
+    const users = getUsers(username, email);
 
     res.json(users);
   } catch (error) {
