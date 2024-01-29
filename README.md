@@ -1,7 +1,5 @@
 # BED Final Project
 
-Bookings project
-
 ## How to get started
 
 You can clone the repo, install and run the app with the following commands:
