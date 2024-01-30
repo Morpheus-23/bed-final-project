@@ -1,9 +1,22 @@
 # BED Final Project
 
+## Running locally
 
-planetscale:
-pscale auth login
-pscale connect bed-final main --port 3309
+### Environment variable required
 
-prisma seed:
-npx prisma db push && npx prisma db seed
+```
+DATABASE_URL   (tested with a mysql database hosted on Planetscale)
+AUTH_SECRET_KEY
+SENTRY_DSN
+```
+
+### Build and run 
+
+```
+npm install
+npm run dev
+```
+
+## Postman
+
+At the last commit all postman tests passed with results exported to ```/postman-results``` 

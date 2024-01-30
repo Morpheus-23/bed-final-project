@@ -1,0 +1,1163 @@
+{
+	"id": "3878bff8-c66e-4240-9b81-39b901299c26",
+	"name": "Bookings API",
+	"timestamp": "2024-01-30T21:13:09.399Z",
+	"collection_id": "4071578-558866b8-fae3-441e-82e1-34a89afb7847",
+	"folder_id": 0,
+	"environment_id": "4071578-6512dc80-059e-4eb3-8275-ac87f3802fd7",
+	"totalPass": 61,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-30T21:12:49.269Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "9bda6a57-ebf0-4c52-b55a-add4e373415d",
+			"name": "Get user by ID",
+			"url": "http://0.0.0.0:3000/users/e5678901-23f0-1234-5678-9abcdef01234",
+			"time": 358,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Id should be a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				358
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Id should be a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "7e505a95-e167-4247-b31e-f8c458e6d820",
+			"name": "Update user by ID",
+			"url": "http://0.0.0.0:3000/users/e5678901-23f0-1234-5678-9abcdef01234",
+			"time": 476,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				476
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "35f14f50-2ff5-4da3-bd04-714fcb1f7fbf",
+			"name": "Delete user by ID",
+			"url": "http://0.0.0.0:3000/users/e5678901-23f0-1234-5678-9abcdef01234",
+			"time": 779,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				779
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ade8c2ff-ca4e-40fb-81de-faca76c6adc4",
+			"name": "Get all users",
+			"url": "http://0.0.0.0:3000/users",
+			"time": 333,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is an array": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				333
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is an array": true
+				}
+			]
+		},
+		{
+			"id": "2ebe5a8b-c7fc-4635-b9e8-1178c31b9958",
+			"name": "Create a new user",
+			"url": "http://0.0.0.0:3000/users",
+			"time": 474,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				474
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "499b5206-8859-4c41-a19c-6c0900a0eb06",
+			"name": "Get host by ID",
+			"url": "http://0.0.0.0:3000/hosts/e2345678-90bc-def0-0123-456789abcdef",
+			"time": 354,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"ID is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ID is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				354
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"ID is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "b189bece-0698-40a5-bbee-158c9ff369bf",
+			"name": "Update host by ID",
+			"url": "http://0.0.0.0:3000/hosts/e2345678-90bc-def0-0123-456789abcdef",
+			"time": 577,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				577
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "70190f9f-5cf9-45c4-8033-9a744fa4246a",
+			"name": "Delete host by ID",
+			"url": "http://0.0.0.0:3000/hosts/e2345678-90bc-def0-0123-456789abcdef",
+			"time": 914,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				914
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "698dbddb-91f2-4346-aaed-6e0bd59148a9",
+			"name": "Get all hosts",
+			"url": "http://0.0.0.0:3000/hosts",
+			"time": 336,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response body is an array": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				336
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response body is an array": true
+				}
+			]
+		},
+		{
+			"id": "284d681f-ace6-40ea-b6a8-0af72457cbc4",
+			"name": "Create a new host",
+			"url": "http://0.0.0.0:3000/hosts",
+			"time": 506,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				506
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "17efec45-7c2b-4754-99e5-dae6ab3e02fb",
+			"name": "Get property by ID",
+			"url": "http://0.0.0.0:3000/properties/i1234567-89f0-1234-5678-9abcdef01234",
+			"time": 363,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Id should be a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				363
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Id should be a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "a2ca13c6-02db-46fa-ab28-c0e9ff524ef7",
+			"name": "Update property by ID",
+			"url": "http://0.0.0.0:3000/properties/i1234567-89f0-1234-5678-9abcdef01234",
+			"time": 510,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				510
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "16a32bbc-e3b4-460b-857b-f81c2c3d73f0",
+			"name": "Delete property by ID",
+			"url": "http://0.0.0.0:3000/properties/i1234567-89f0-1234-5678-9abcdef01234",
+			"time": 652,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				652
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "68a4d330-3ed8-4351-98f7-04059959c75a",
+			"name": "Get all properties",
+			"url": "http://0.0.0.0:3000/properties",
+			"time": 370,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is an array with at least one element": true,
+				"maxGuestCount is a non-negative integer": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array with at least one element": {
+					"pass": 1,
+					"fail": 0
+				},
+				"maxGuestCount is a non-negative integer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				370
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is an array with at least one element": true,
+					"maxGuestCount is a non-negative integer": true
+				}
+			]
+		},
+		{
+			"id": "97ccd85b-7ff1-4975-a69b-568d14933d4c",
+			"name": "Create a new property",
+			"url": "http://0.0.0.0:3000/properties",
+			"time": 522,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				522
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "702b4d72-75c9-4f82-af8c-ad32d1c2087b",
+			"name": "Get amenity by ID",
+			"url": "http://0.0.0.0:3000/amenities/u3456789-01rs-tuvw-01cd-ef0123456789",
+			"time": 348,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - id and name": true,
+				"id is a non-empty string": true,
+				"Name should be a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id and name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"id is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				348
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - id and name": true,
+					"id is a non-empty string": true,
+					"Name should be a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "161a81dc-f5b4-484c-bddb-43cdae2ca285",
+			"name": "Update amenity by ID",
+			"url": "http://0.0.0.0:3000/amenities/u3456789-01rs-tuvw-01cd-ef0123456789",
+			"time": 513,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				513
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2669d8ce-9612-4799-b87e-03e69db1afb9",
+			"name": "Delete amenity by ID",
+			"url": "http://0.0.0.0:3000/amenities/u3456789-01rs-tuvw-01cd-ef0123456789",
+			"time": 481,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				481
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "12c52b19-f0a8-4e9c-8a99-ef5ffe8e8bf5",
+			"name": "Get all amenities",
+			"url": "http://0.0.0.0:3000/amenities",
+			"time": 368,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is an array with at least one element": true,
+				"Each element in the response has the required fields - id and name": true,
+				"The id must be a non-empty string": true,
+				"Name is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array with at least one element": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each element in the response has the required fields - id and name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The id must be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				368
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is an array with at least one element": true,
+					"Each element in the response has the required fields - id and name": true,
+					"The id must be a non-empty string": true,
+					"Name is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "468576cd-29a7-4144-bb9c-68044aa1658e",
+			"name": "Create a new amenity",
+			"url": "http://0.0.0.0:3000/amenities",
+			"time": 510,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				510
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "c2d38595-21b3-4ab1-95db-17fe63112a59",
+			"name": "Get booking by ID",
+			"url": "http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef",
+			"time": 348,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Id should be a non-empty string": true,
+				"userId is a non-empty string": true,
+				"propertyId should be a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"userId is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"propertyId should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				348
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Id should be a non-empty string": true,
+					"userId is a non-empty string": true,
+					"propertyId should be a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "436b6670-b91c-4a39-840a-184db689118b",
+			"name": "Update booking by ID",
+			"url": "http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef",
+			"time": 522,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				522
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "969bfbd5-6bd2-4e66-a842-ca50f52ac267",
+			"name": "Delete booking by ID",
+			"url": "http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef",
+			"time": 532,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				532
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a239e9a4-c8cf-41c7-b9b5-1b189c80a293",
+			"name": "Get all bookings",
+			"url": "http://0.0.0.0:3000/bookings",
+			"time": 352,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is an array": true,
+				"Id should be a non-empty string": true,
+				"userId is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"userId is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				352
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is an array": true,
+					"Id should be a non-empty string": true,
+					"userId is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "31304c9b-4013-4ed6-926e-b73f9516e8cc",
+			"name": "Create a new booking",
+			"url": "http://0.0.0.0:3000/bookings",
+			"time": 496,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				496
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "97d52ad2-1d71-4101-a63b-4b10def5a159",
+			"name": "Get review by ID",
+			"url": "http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234",
+			"time": 336,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Id is a non-empty string": true,
+				"userId is a non-empty string": true,
+				"propertyId is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"userId is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"propertyId is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				336
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Id is a non-empty string": true,
+					"userId is a non-empty string": true,
+					"propertyId is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "3c810410-06df-4715-87e9-3383ffe39370",
+			"name": "Update review by ID",
+			"url": "http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234",
+			"time": 533,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				533
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5bed6a50-f607-4dfd-8cb8-0810cf7d3cb7",
+			"name": "Delete review by ID",
+			"url": "http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234",
+			"time": 495,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				495
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "627ad592-a76f-47cf-baab-ceec8929fac4",
+			"name": "Get all reviews",
+			"url": "http://0.0.0.0:3000/reviews",
+			"time": 318,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response is an array with at least one element": true,
+				"Id is a non-empty string": true,
+				"userId is a non-empty string": true,
+				"propertyId is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array with at least one element": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"userId is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"propertyId is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				318
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response is an array with at least one element": true,
+					"Id is a non-empty string": true,
+					"userId is a non-empty string": true,
+					"propertyId is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "2dcd9a9d-0fa9-45a1-a85d-393ed9bf4b5b",
+			"name": "Create a new review",
+			"url": "http://0.0.0.0:3000/reviews",
+			"time": 465,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				465
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "adccd34c-f3eb-4a5d-995f-074a7524c3d3",
+			"name": "User Login",
+			"url": "http://0.0.0.0:3000/login",
+			"time": 31,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required field 'token'": true,
+				"Token is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required field 'token'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required field 'token'": true,
+					"Token is a non-empty string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 14172,
+	"collection": {
+		"requests": [
+			{
+				"id": "9bda6a57-ebf0-4c52-b55a-add4e373415d",
+				"method": "GET"
+			},
+			{
+				"id": "7e505a95-e167-4247-b31e-f8c458e6d820",
+				"method": "PUT"
+			},
+			{
+				"id": "35f14f50-2ff5-4da3-bd04-714fcb1f7fbf",
+				"method": "DELETE"
+			},
+			{
+				"id": "ade8c2ff-ca4e-40fb-81de-faca76c6adc4",
+				"method": "GET"
+			},
+			{
+				"id": "2ebe5a8b-c7fc-4635-b9e8-1178c31b9958",
+				"method": "POST"
+			},
+			{
+				"id": "499b5206-8859-4c41-a19c-6c0900a0eb06",
+				"method": "GET"
+			},
+			{
+				"id": "b189bece-0698-40a5-bbee-158c9ff369bf",
+				"method": "PUT"
+			},
+			{
+				"id": "70190f9f-5cf9-45c4-8033-9a744fa4246a",
+				"method": "DELETE"
+			},
+			{
+				"id": "698dbddb-91f2-4346-aaed-6e0bd59148a9",
+				"method": "GET"
+			},
+			{
+				"id": "284d681f-ace6-40ea-b6a8-0af72457cbc4",
+				"method": "POST"
+			},
+			{
+				"id": "17efec45-7c2b-4754-99e5-dae6ab3e02fb",
+				"method": "GET"
+			},
+			{
+				"id": "a2ca13c6-02db-46fa-ab28-c0e9ff524ef7",
+				"method": "PUT"
+			},
+			{
+				"id": "16a32bbc-e3b4-460b-857b-f81c2c3d73f0",
+				"method": "DELETE"
+			},
+			{
+				"id": "68a4d330-3ed8-4351-98f7-04059959c75a",
+				"method": "GET"
+			},
+			{
+				"id": "97ccd85b-7ff1-4975-a69b-568d14933d4c",
+				"method": "POST"
+			},
+			{
+				"id": "702b4d72-75c9-4f82-af8c-ad32d1c2087b",
+				"method": "GET"
+			},
+			{
+				"id": "161a81dc-f5b4-484c-bddb-43cdae2ca285",
+				"method": "PUT"
+			},
+			{
+				"id": "2669d8ce-9612-4799-b87e-03e69db1afb9",
+				"method": "DELETE"
+			},
+			{
+				"id": "12c52b19-f0a8-4e9c-8a99-ef5ffe8e8bf5",
+				"method": "GET"
+			},
+			{
+				"id": "468576cd-29a7-4144-bb9c-68044aa1658e",
+				"method": "POST"
+			},
+			{
+				"id": "c2d38595-21b3-4ab1-95db-17fe63112a59",
+				"method": "GET"
+			},
+			{
+				"id": "436b6670-b91c-4a39-840a-184db689118b",
+				"method": "PUT"
+			},
+			{
+				"id": "969bfbd5-6bd2-4e66-a842-ca50f52ac267",
+				"method": "DELETE"
+			},
+			{
+				"id": "a239e9a4-c8cf-41c7-b9b5-1b189c80a293",
+				"method": "GET"
+			},
+			{
+				"id": "31304c9b-4013-4ed6-926e-b73f9516e8cc",
+				"method": "POST"
+			},
+			{
+				"id": "97d52ad2-1d71-4101-a63b-4b10def5a159",
+				"method": "GET"
+			},
+			{
+				"id": "3c810410-06df-4715-87e9-3383ffe39370",
+				"method": "PUT"
+			},
+			{
+				"id": "5bed6a50-f607-4dfd-8cb8-0810cf7d3cb7",
+				"method": "DELETE"
+			},
+			{
+				"id": "627ad592-a76f-47cf-baab-ceec8929fac4",
+				"method": "GET"
+			},
+			{
+				"id": "2dcd9a9d-0fa9-45a1-a85d-393ed9bf4b5b",
+				"method": "POST"
+			},
+			{
+				"id": "adccd34c-f3eb-4a5d-995f-074a7524c3d3",
+				"method": "POST"
+			}
+		]
+	}
+}

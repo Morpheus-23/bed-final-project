@@ -1,0 +1,797 @@
+{
+	"id": "992d81d9-d91c-4ab6-baec-84ef0f272c1b",
+	"name": "Bookings API Negative",
+	"timestamp": "2024-01-30T21:18:33.531Z",
+	"collection_id": "4071578-99da69c5-e6ae-470f-94bb-02bb8c217daa",
+	"folder_id": 0,
+	"environment_id": "4071578-6512dc80-059e-4eb3-8275-ac87f3802fd7",
+	"totalPass": 25,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-30T21:18:22.684Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "27cf65fa-ef7a-46f8-aaa0-912fb83557d2",
+			"name": "Get user by ID",
+			"url": "http://0.0.0.0:3000/users/:userId",
+			"time": 220,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				220
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "8718e393-077a-4572-966c-14e1cf28e80d",
+			"name": "Update user by ID",
+			"url": "http://0.0.0.0:3000/users/d4567890-12",
+			"time": 262,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				262
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "12f16e89-3f54-4c4c-9498-c7308abbd72d",
+			"name": "Delete user by ID",
+			"url": "http://0.0.0.0:3000/users/d4567890-12ef-01",
+			"time": 284,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				284
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "3fd0b401-2dbc-44e3-90ec-8942ac273fe8",
+			"name": "Create a new user",
+			"url": "http://0.0.0.0:3000/users",
+			"time": 211,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				211
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "8d997f88-8f78-45cc-9355-dacafac0499b",
+			"name": "Get host by ID",
+			"url": "http://0.0.0.0:3000/hosts/:hostId",
+			"time": 249,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				249
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "09ae3f11-530d-4094-8e07-b6dc02dfcc75",
+			"name": "Update host by ID",
+			"url": "http://0.0.0.0:3000/hosts/:hostId",
+			"time": 279,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				279
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "90b82f24-1645-418a-8bbb-e15129bbb424",
+			"name": "Delete host by ID",
+			"url": "http://0.0.0.0:3000/hosts/:hostId",
+			"time": 519,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				519
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "b87f7a02-4f21-4e20-8076-0f9b5e9bc2f7",
+			"name": "Create a new host",
+			"url": "http://0.0.0.0:3000/hosts",
+			"time": 203,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				203
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "5d24e1af-66a8-42a1-a824-d2c3629c8efd",
+			"name": "Get property by ID",
+			"url": "http://0.0.0.0:3000/properties/h0123456-78f0-1234-5678-9abcdef01234",
+			"time": 260,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				260
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "1eaafaca-4263-4580-8ec8-35cd55c157dc",
+			"name": "Update property by ID",
+			"url": "http://0.0.0.0:3000/properties/h0123456-78f0-1234-5678-9abcdef01234",
+			"time": 300,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				300
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "c49035d0-3d0f-4bbc-8032-3ae766f59801",
+			"name": "Delete property by ID",
+			"url": "http://0.0.0.0:3000/properties/h0123456-78f0-1234-5678-9abcdef01234",
+			"time": 319,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				319
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "749c9e31-c763-4c34-a7f0-b13785228076",
+			"name": "Create a new property",
+			"url": "http://0.0.0.0:3000/properties",
+			"time": 207,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				207
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "53a20e4e-2a13-4564-89e0-d6846d1fbad4",
+			"name": "Get amenity by ID",
+			"url": "http://0.0.0.0:3000/amenities/t2345678-90qr-stu",
+			"time": 251,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				251
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "98846fd4-5e46-4b13-b472-7d71427a0b3b",
+			"name": "Update amenity by ID",
+			"url": "http://0.0.0.0:3000/amenities/t2345678-90qr-st",
+			"time": 294,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				294
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "86d35fef-61fb-4219-bffd-92350e5089a1",
+			"name": "Delete amenity by ID",
+			"url": "http://0.0.0.0:3000/amenities/bc-def012345678",
+			"time": 273,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "00f62a02-8f2d-4ffa-9552-f5508daa1ed0",
+			"name": "Create a new amenity",
+			"url": "http://0.0.0.0:3000/amenities",
+			"time": 226,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				226
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "b4692548-0182-4766-a4f7-8dc9b3ef8c57",
+			"name": "Get booking by ID",
+			"url": "http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef",
+			"time": 266,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				266
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "2a75cf9e-f908-4242-8c4c-d76f7e37ddc5",
+			"name": "Update booking by ID",
+			"url": "http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef",
+			"time": 265,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				265
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "e517ba6b-bf4a-4f7a-8f96-52f9fd6ae861",
+			"name": "Delete booking by ID",
+			"url": "http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef",
+			"time": 276,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				276
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "de6669c3-6658-41fa-b81a-1d54d78cf64d",
+			"name": "Create a new booking",
+			"url": "http://0.0.0.0:3000/bookings",
+			"time": 213,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				213
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "cc8c972b-3595-48d2-93f4-5e8e147c3f08",
+			"name": "Get review by ID",
+			"url": "http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234",
+			"time": 241,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				241
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "8db0031d-83cd-4768-a058-cf4d01218c5d",
+			"name": "Update review by ID",
+			"url": "http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234",
+			"time": 269,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				269
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "eb04e647-b2d8-40c9-8005-9adc6ae9ea8f",
+			"name": "Delete review by ID",
+			"url": "http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234",
+			"time": 269,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				269
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "fa0e0948-7247-44e6-a048-c3f8572ea4f9",
+			"name": "Create a new review",
+			"url": "http://0.0.0.0:3000/reviews",
+			"time": 202,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				202
+			],
+			"allTests": [
+				{
+					"Response status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "36f64a72-b0ae-4d0f-938b-12cb6807058b",
+			"name": "User Login",
+			"url": "http://0.0.0.0:3000/login",
+			"time": 28,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Response status code is 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6386,
+	"collection": {
+		"requests": [
+			{
+				"id": "27cf65fa-ef7a-46f8-aaa0-912fb83557d2",
+				"method": "GET"
+			},
+			{
+				"id": "8718e393-077a-4572-966c-14e1cf28e80d",
+				"method": "PUT"
+			},
+			{
+				"id": "12f16e89-3f54-4c4c-9498-c7308abbd72d",
+				"method": "DELETE"
+			},
+			{
+				"id": "3fd0b401-2dbc-44e3-90ec-8942ac273fe8",
+				"method": "POST"
+			},
+			{
+				"id": "8d997f88-8f78-45cc-9355-dacafac0499b",
+				"method": "GET"
+			},
+			{
+				"id": "09ae3f11-530d-4094-8e07-b6dc02dfcc75",
+				"method": "PUT"
+			},
+			{
+				"id": "90b82f24-1645-418a-8bbb-e15129bbb424",
+				"method": "DELETE"
+			},
+			{
+				"id": "b87f7a02-4f21-4e20-8076-0f9b5e9bc2f7",
+				"method": "POST"
+			},
+			{
+				"id": "5d24e1af-66a8-42a1-a824-d2c3629c8efd",
+				"method": "GET"
+			},
+			{
+				"id": "1eaafaca-4263-4580-8ec8-35cd55c157dc",
+				"method": "PUT"
+			},
+			{
+				"id": "c49035d0-3d0f-4bbc-8032-3ae766f59801",
+				"method": "DELETE"
+			},
+			{
+				"id": "749c9e31-c763-4c34-a7f0-b13785228076",
+				"method": "POST"
+			},
+			{
+				"id": "53a20e4e-2a13-4564-89e0-d6846d1fbad4",
+				"method": "GET"
+			},
+			{
+				"id": "98846fd4-5e46-4b13-b472-7d71427a0b3b",
+				"method": "PUT"
+			},
+			{
+				"id": "86d35fef-61fb-4219-bffd-92350e5089a1",
+				"method": "DELETE"
+			},
+			{
+				"id": "00f62a02-8f2d-4ffa-9552-f5508daa1ed0",
+				"method": "POST"
+			},
+			{
+				"id": "b4692548-0182-4766-a4f7-8dc9b3ef8c57",
+				"method": "GET"
+			},
+			{
+				"id": "2a75cf9e-f908-4242-8c4c-d76f7e37ddc5",
+				"method": "PUT"
+			},
+			{
+				"id": "e517ba6b-bf4a-4f7a-8f96-52f9fd6ae861",
+				"method": "DELETE"
+			},
+			{
+				"id": "de6669c3-6658-41fa-b81a-1d54d78cf64d",
+				"method": "POST"
+			},
+			{
+				"id": "cc8c972b-3595-48d2-93f4-5e8e147c3f08",
+				"method": "GET"
+			},
+			{
+				"id": "8db0031d-83cd-4768-a058-cf4d01218c5d",
+				"method": "PUT"
+			},
+			{
+				"id": "eb04e647-b2d8-40c9-8005-9adc6ae9ea8f",
+				"method": "DELETE"
+			},
+			{
+				"id": "fa0e0948-7247-44e6-a048-c3f8572ea4f9",
+				"method": "POST"
+			},
+			{
+				"id": "36f64a72-b0ae-4d0f-938b-12cb6807058b",
+				"method": "POST"
+			}
+		]
+	}
+}

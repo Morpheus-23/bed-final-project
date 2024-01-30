@@ -1,9 +1,15 @@
 import express from "express";
 import usersRouter from "./routes/users.js";
+import reviewsRouter from "./routes/reviews.js";
+import propertiesRouter from "./routes/properties.js";
+import hostsRouter from "./routes/hosts.js";
+import bookingsRouter from "./routes/bookings.js";
+import amenitiesRouter from "./routes/amenities.js";
 import loginRouter from "./routes/login.js";
 import "dotenv/config";
 import * as Sentry from "@sentry/node";
 import errorHandler from "./middleware/errorHandler.js";
+import log from "./middleware/logMiddleware.js";
 
 const app = express();
 
@@ -28,10 +34,16 @@ app.use(Sentry.Handlers.requestHandler());
 app.use(Sentry.Handlers.tracingHandler());
 
 app.use(express.json());
-app.use("/users", usersRouter);
+app.use(log);
 
-// Login
+//routes
 app.use("/login", loginRouter);
+app.use("/users", usersRouter);
+app.use("/hosts", hostsRouter);
+app.use("/bookings", bookingsRouter);
+app.use("/reviews", reviewsRouter);
+app.use("/properties", propertiesRouter);
+app.use("/amenities", amenitiesRouter);
 
 app.use(Sentry.Handlers.errorHandler());
 app.use(errorHandler);

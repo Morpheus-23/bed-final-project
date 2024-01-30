@@ -1,14 +1,18 @@
 import { Router } from "express";
 import getUsers from "../services/users/getUsers.js";
+import createUser from "../services/users/createUser.js";
+import getUserById from "../services/users/getUserById.js";
+import deleteUserById from "../services/users/deleteUserById.js";
+import updateUserById from "../services/users/updateUserById.js";
 import authMiddleware from "../middleware/auth.js";
-import { PrismaClient } from "@prisma/client";
 
-const users = Router();
 
-users.get("/", (req, res, next) => {
+const router = Router();
+
+router.get("/", async (req, res, next) => {
   try {
     const { username, email } = req.query;
-    const users = getUsers(username, email);
+    const users = await getUsers(username, email);
 
     res.json(users);
   } catch (error) {
@@ -16,78 +20,88 @@ users.get("/", (req, res, next) => {
   }
 });
 
-users.get("/:id", (req, res) => {
+router.get("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
+    const user = await getUserById(id);
 
-    const user = {
-      id: 1,
-      username: "oozer",
-      password: "00z3r",
-      name: "Oozy Oozborn",
-      image: "http://blabla.bla/pic/1",
-    };
-
-    if (user && id == 1) {
-      res.status(200).json(user);
+    if (!user) {
+      res.status(404).json({ message: `User with id ${id} not found` });
     } else {
-      res.status(404).json({ message: `User id ${id} not found` });
+      res.status(200).json(user);
     }
   } catch (error) {
     next(error);
   }
 });
 
-// users.post("/", (req, res) => {
-users.post("/", authMiddleware, async (req, res, next) => {
-  const { username, password, name, image } = req.body;
-
-  //call domain and receive user
-  const user = {
-    id: Math.random(),
-    username: username,
-    password: password,
-    name: name,
-    image: image,
-  };
-  res.status(201).send(user);
-});
-
-users.put("/:id", (req, res) => {
-  const { id } = req.params;
-  const { username, password, name, image } = req.body;
-  const user = {
-    id: Math.random(),
-    username: username,
-    password: password,
-    name: name,
-    image: image,
-  };
-  if (user && id == 1) {
-    res.status(200).send({ message: `User id ${id} updated`, user });
-  } else {
-    res.status(404).json({ message: `User id ${id} not found` });
+router.post("/", authMiddleware, async (req, res, next) => {
+  try {
+    const { username, password, name, email, phoneNumber, profilePicture } =
+      req.body;
+    const newUser = await createUser(
+      username,
+      password,
+      name,
+      email,
+      phoneNumber,
+      profilePicture
+    );
+    res.status(201).json(newUser);
+  } catch (error) {
+    res.status(400).json({
+      message: `Failed to create User. Please check your request.`,
+    });
+    next(error);
   }
 });
 
-users.delete("/:id", (req, res) => {
-  const { id } = req.params;
+router.put("/:id", authMiddleware, async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const { username, password, name, email, phoneNumber, profilePicture } =
+      req.body;
+    const user = await updateUserById(id, {
+      username,
+      password,
+      name,
+      email,
+      phoneNumber,
+      profilePicture,
+    });
 
-  //tmp
-  const { username, password, name, image } = req.body;
-  const user = {
-    id: Math.random(),
-    username: username,
-    password: password,
-    name: name,
-    image: image,
-  };
-
-  if (user && id == 1) {
-    res.status(200).send({ message: `User id ${id} deleted`, user });
-  } else {
-    res.status(404).json({ message: `User id ${id} not found` });
+    if (user) {
+      res.status(200).send({
+        message: `User with id ${id} successfully updated`,
+      });
+    } else {
+      res.status(404).json({
+        message: `User with id ${id} not found`,
+      });
+    }
+  } catch (error) {
+    next(error);
   }
 });
 
-export default users;
+router.delete("/:id", authMiddleware, async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const user = await deleteUserById(id);
+
+    if (user) {
+      res.status(200).send({
+        message: `User with id ${id} successfully deleted`,
+        user,
+      });
+    } else {
+      res.status(404).json({
+        message: `User with id ${id} not found`,
+      });
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
+export default router;
