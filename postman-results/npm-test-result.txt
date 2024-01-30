@@ -1,0 +1,392 @@
+
+> express-bookings@1.0.0 test
+> npm run test-positive && npm run test-negative
+
+
+> express-bookings@1.0.0 test-positive
+> newman run "./postman/collections/Bookings API.json" -e "./postman/environments/Local.postman_environment.json"
+
+newman
+
+Bookings API
+
+❏ users / {userId}
+↳ Get user by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 120ms]
+  GET http://0.0.0.0:3000/users/e5678901-23f0-1234-5678-9abcdef01234 [200 OK, 475B, 271ms]
+  ✓  Response status code is 200
+  ✓  Id should be a non-empty string
+
+↳ Update user by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  PUT http://0.0.0.0:3000/users/e5678901-23f0-1234-5678-9abcdef01234 [200 OK, 319B, 370ms]
+  ✓  Response status code is 200
+
+↳ Delete user by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 29ms]
+  DELETE http://0.0.0.0:3000/users/e5678901-23f0-1234-5678-9abcdef01234 [200 OK, 366B, 440ms]
+  ✓  Response status code is 200
+
+❏ users
+↳ Get all users
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  GET http://0.0.0.0:3000/users [200 OK, 1.27kB, 277ms]
+  ✓  Response status code is 200
+  ✓  Response is an array
+
+↳ Create a new user
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 29ms]
+  POST http://0.0.0.0:3000/users [201 Created, 554B, 344ms]
+  ✓  Response status code is 201
+
+❏ hosts / {hostId}
+↳ Get host by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  GET http://0.0.0.0:3000/hosts/e2345678-90bc-def0-0123-456789abcdef [200 OK, 575B, 245ms]
+  ✓  Response status code is 200
+  ✓  ID is a non-empty string
+
+↳ Update host by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  PUT http://0.0.0.0:3000/hosts/e2345678-90bc-def0-0123-456789abcdef [200 OK, 319B, 325ms]
+  ✓  Response status code is 200
+
+↳ Delete host by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 36ms]
+  DELETE http://0.0.0.0:3000/hosts/e2345678-90bc-def0-0123-456789abcdef [200 OK, 366B, 465ms]
+  ✓  Response status code is 200
+
+❏ hosts
+↳ Get all hosts
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 28ms]
+  GET http://0.0.0.0:3000/hosts [200 OK, 1.59kB, 236ms]
+  ✓  Response status code is 200
+  ✓  Response body is an array
+
+↳ Create a new host
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  POST http://0.0.0.0:3000/hosts [201 Created, 565B, 304ms]
+  ✓  Response status code is 201
+
+❏ properties / {propertyId}
+↳ Get property by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  GET http://0.0.0.0:3000/properties/i1234567-89f0-1234-5678-9abcdef01234 [200 OK, 566B, 234ms]
+  ✓  Response status code is 200
+  ✓  Id should be a non-empty string
+
+↳ Update property by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  PUT http://0.0.0.0:3000/properties/i1234567-89f0-1234-5678-9abcdef01234 [200 OK, 323B, 354ms]
+  ✓  Response status code is 200
+
+↳ Delete property by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 28ms]
+  DELETE http://0.0.0.0:3000/properties/i1234567-89f0-1234-5678-9abcdef01234 [200 OK, 374B, 384ms]
+  ✓  Response status code is 200
+
+❏ properties
+↳ Get all properties
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  GET http://0.0.0.0:3000/properties [200 OK, 1.24kB, 223ms]
+  ✓  Response status code is 200
+  ✓  Response is an array with at least one element
+  ✓  maxGuestCount is a non-negative integer
+
+↳ Create a new property
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 24ms]
+  POST http://0.0.0.0:3000/properties [201 Created, 587B, 293ms]
+  ✓  Response status code is 201
+
+❏ amenities / {amenityId}
+↳ Get amenity by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  GET http://0.0.0.0:3000/amenities/u3456789-01rs-tuvw-01cd-ef0123456789 [200 OK, 302B, 226ms]
+  ✓  Response status code is 200
+  ✓  Response has the required fields - id and name
+  ✓  id is a non-empty string
+  ✓  Name should be a non-empty string
+
+↳ Update amenity by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 29ms]
+  PUT http://0.0.0.0:3000/amenities/u3456789-01rs-tuvw-01cd-ef0123456789 [200 OK, 322B, 312ms]
+  ✓  Response status code is 200
+
+↳ Delete amenity by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  DELETE http://0.0.0.0:3000/amenities/u3456789-01rs-tuvw-01cd-ef0123456789 [200 OK, 372B, 294ms]
+  ✓  Response status code is 200
+
+❏ amenities
+↳ Get all amenities
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 73ms]
+  GET http://0.0.0.0:3000/amenities [200 OK, 796B, 307ms]
+  ✓  Response status code is 200
+  ✓  Response is an array with at least one element
+  ✓  Each element in the response has the required fields - id and name
+  ✓  The id must be a non-empty string
+  ✓  Name is a non-empty string
+
+↳ Create a new amenity
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 28ms]
+  POST http://0.0.0.0:3000/amenities [201 Created, 299B, 320ms]
+  ✓  Response status code is 201
+
+❏ bookings / {bookingId}
+↳ Get booking by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  GET http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef [200 OK, 529B, 244ms]
+  ✓  Response status code is 200
+  ✓  Id should be a non-empty string
+  ✓  userId is a non-empty string
+  ✓  propertyId should be a non-empty string
+
+↳ Update booking by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 23ms]
+  PUT http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef [200 OK, 322B, 296ms]
+  ✓  Response status code is 200
+
+↳ Delete booking by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 31ms]
+  DELETE http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef [200 OK, 372B, 303ms]
+  ✓  Response status code is 200
+
+❏ bookings
+↳ Get all bookings
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  GET http://0.0.0.0:3000/bookings [200 OK, 529B, 307ms]
+  ✓  Response status code is 200
+  ✓  Response is an array
+  ✓  Id should be a non-empty string
+  ✓  userId is a non-empty string
+
+↳ Create a new booking
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 28ms]
+  POST http://0.0.0.0:3000/bookings [201 Created, 534B, 304ms]
+  ✓  Response status code is 201
+
+❏ reviews / {reviewId}
+↳ Get review by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 24ms]
+  GET http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234 [200 OK, 477B, 219ms]
+  ✓  Response status code is 200
+  ✓  Response has the required fields
+  ✓  Id is a non-empty string
+  ✓  userId is a non-empty string
+  ✓  propertyId is a non-empty string
+
+↳ Update review by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  PUT http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234 [200 OK, 321B, 330ms]
+  ✓  Response status code is 200
+
+↳ Delete review by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 24ms]
+  DELETE http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234 [200 OK, 370B, 287ms]
+  ✓  Response status code is 200
+
+❏ reviews
+↳ Get all reviews
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  GET http://0.0.0.0:3000/reviews [200 OK, 898B, 222ms]
+  ✓  Response status code is 200
+  ✓  Response is an array with at least one element
+  ✓  Id is a non-empty string
+  ✓  userId is a non-empty string
+  ✓  propertyId is a non-empty string
+
+↳ Create a new review
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 28ms]
+  POST http://0.0.0.0:3000/reviews [201 Created, 473B, 378ms]
+  ✓  Response status code is 201
+
+→ User Login
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 22ms]
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 22ms]
+  ✓  Response status code is 200
+  ✓  Response has the required field 'token'
+  ✓  Token is a non-empty string
+
+[90m┌─────────────────────────[39m[90m┬────────────────────[39m[90m┬────────────────────┐[39m
+[90m│[39m                         [90m│[39m           executed [90m│[39m             failed [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m              iterations [90m│[39m                  1 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m                requests [90m│[39m                 62 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m            test-scripts [90m│[39m                 62 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m      prerequest-scripts [90m│[39m                 31 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m              assertions [90m│[39m                 61 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────┴────────────────────┴────────────────────┤[39m
+[90m│[39m total run duration: 11.9s                                         [90m│[39m
+[90m├───────────────────────────────────────────────────────────────────┤[39m
+[90m│[39m total data received: 16.23kB (approx)                             [90m│[39m
+[90m├───────────────────────────────────────────────────────────────────┤[39m
+[90m│[39m average response time: 162ms [min: 22ms, max: 465ms, s.d.: 143ms] [90m│[39m
+[90m└───────────────────────────────────────────────────────────────────┘[39m
+
+> express-bookings@1.0.0 test-negative
+> newman run "./postman/collections/Bookings API Negative.json" -e "./postman/environments/Local.postman_environment.json"
+
+newman
+
+Bookings API Negative
+
+❏ users / {userId}
+↳ Get user by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 88ms]
+  GET http://0.0.0.0:3000/users/:userId [404 Not Found, 286B, 284ms]
+  ✓  Response status code is 404
+
+↳ Update user by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 39ms]
+  PUT http://0.0.0.0:3000/users/d4567890-12 [404 Not Found, 290B, 303ms]
+  ✓  Response status code is 404
+
+↳ Delete user by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 38ms]
+  DELETE http://0.0.0.0:3000/users/d4567890-12ef-01 [404 Not Found, 295B, 288ms]
+  ✓  Response status code is 404
+
+❏ users
+↳ Create a new user
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  POST http://0.0.0.0:3000/users [400 Bad Request, 307B, 211ms]
+  ✓  Response status code is 400
+
+❏ hosts / {hostId}
+↳ Get host by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 28ms]
+  GET http://0.0.0.0:3000/hosts/:hostId [404 Not Found, 286B, 228ms]
+  ✓  Response status code is 404
+
+↳ Update host by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 40ms]
+  PUT http://0.0.0.0:3000/hosts/:hostId [404 Not Found, 286B, 280ms]
+  ✓  Response status code is 404
+
+↳ Delete host by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  DELETE http://0.0.0.0:3000/hosts/:hostId [404 Not Found, 286B, 268ms]
+  ✓  Response status code is 404
+
+❏ hosts
+↳ Create a new host
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  POST http://0.0.0.0:3000/hosts [400 Bad Request, 307B, 193ms]
+  ✓  Response status code is 400
+
+❏ properties / {propertyId}
+↳ Get property by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 31ms]
+  GET http://0.0.0.0:3000/properties/h0123456-78f0-1234-5678-9abcdef01234 [404 Not Found, 319B, 312ms]
+  ✓  Response status code is 404
+
+↳ Update property by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  PUT http://0.0.0.0:3000/properties/h0123456-78f0-1234-5678-9abcdef01234 [404 Not Found, 319B, 304ms]
+  ✓  Response status code is 404
+
+↳ Delete property by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 29ms]
+  DELETE http://0.0.0.0:3000/properties/h0123456-78f0-1234-5678-9abcdef01234 [404 Not Found, 319B, 276ms]
+  ✓  Response status code is 404
+
+❏ properties
+↳ Create a new property
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  POST http://0.0.0.0:3000/properties [400 Bad Request, 311B, 211ms]
+  ✓  Response status code is 400
+
+❏ amenities / {amenityId}
+↳ Get amenity by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 29ms]
+  GET http://0.0.0.0:3000/amenities/t2345678-90qr-stu [404 Not Found, 299B, 232ms]
+  ✓  Response status code is 404
+
+↳ Update amenity by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 29ms]
+  PUT http://0.0.0.0:3000/amenities/t2345678-90qr-st [404 Not Found, 298B, 281ms]
+  ✓  Response status code is 404
+
+↳ Delete amenity by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  DELETE http://0.0.0.0:3000/amenities/bc-def012345678 [404 Not Found, 297B, 279ms]
+  ✓  Response status code is 404
+
+❏ amenities
+↳ Create a new amenity
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  POST http://0.0.0.0:3000/amenities [400 Bad Request, 310B, 187ms]
+  ✓  Response status code is 400
+
+❏ bookings / {bookingId}
+↳ Get booking by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 32ms]
+  GET http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef [404 Not Found, 318B, 233ms]
+  ✓  Response status code is 404
+
+↳ Update booking by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  PUT http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef [404 Not Found, 318B, 304ms]
+  ✓  Response status code is 404
+
+↳ Delete booking by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  DELETE http://0.0.0.0:3000/bookings/f0123456-78ab-cdef-0123-456789abcdef [404 Not Found, 318B, 263ms]
+  ✓  Response status code is 404
+
+❏ bookings
+↳ Create a new booking
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  POST http://0.0.0.0:3000/bookings [400 Bad Request, 310B, 265ms]
+  ✓  Response status code is 400
+
+❏ reviews / {reviewId}
+↳ Get review by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 30ms]
+  GET http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234 [404 Not Found, 317B, 255ms]
+  ✓  Response status code is 404
+
+↳ Update review by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 27ms]
+  PUT http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234 [404 Not Found, 317B, 312ms]
+  ✓  Response status code is 404
+
+↳ Delete review by ID
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  DELETE http://0.0.0.0:3000/reviews/j0123456-78f0-1234-5678-9abcdef01234 [404 Not Found, 317B, 269ms]
+  ✓  Response status code is 404
+
+❏ reviews
+↳ Create a new review
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 25ms]
+  POST http://0.0.0.0:3000/reviews [400 Bad Request, 311B, 190ms]
+  ✓  Response status code is 400
+
+→ User Login
+  POST http://0.0.0.0:3000/login [200 OK, 453B, 26ms]
+  POST http://0.0.0.0:3000/login [401 Unauthorized, 279B, 24ms]
+  ✓  Response status code is 401
+
+[90m┌─────────────────────────[39m[90m┬────────────────────[39m[90m┬────────────────────┐[39m
+[90m│[39m                         [90m│[39m           executed [90m│[39m             failed [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m              iterations [90m│[39m                  1 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m                requests [90m│[39m                 50 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m            test-scripts [90m│[39m                 50 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m      prerequest-scripts [90m│[39m                 25 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼────────────────────┤[39m
+[90m│[39m              assertions [90m│[39m                 25 [90m│[39m                  0 [90m│[39m
+[90m├─────────────────────────┴────────────────────┴────────────────────┤[39m
+[90m│[39m total run duration: 8.5s                                          [90m│[39m
+[90m├───────────────────────────────────────────────────────────────────┤[39m
+[90m│[39m total data received: 6.98kB (approx)                              [90m│[39m
+[90m├───────────────────────────────────────────────────────────────────┤[39m
+[90m│[39m average response time: 140ms [min: 24ms, max: 312ms, s.d.: 117ms] [90m│[39m
+[90m└───────────────────────────────────────────────────────────────────┘[39m
